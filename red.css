@@ -1,0 +1,10 @@
+p {
+    color: red;
+}
+
+
+h1::first-letter,
+h2::first-letter,
+h3::first-letter {
+  text-transform: capitalize;
+}

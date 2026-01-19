@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 480px;
+    height: 280px;
+    padding: 28px;
+    border-radius: 22px;
+    color: #fff;
+    position: relative;
+
+    background:
+        repeating-linear-gradient(
+            -12deg,
+            rgba(255, 255, 255, .04) 0px,
+            rgba(255, 255, 255, .04) 1px,
+            transparent 1px,
+            transparent 12px
+        ),
+        linear-gradient(180deg, #fff, #1a1aad);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mc-logo {
+    position: relative;
+    width: 46px;
+    height: 28px;
+}
+
+.mc-logo span {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #eb001b;
+    left: 0;
+}
+
+.orange {
+    background: #f79e1b;
+    right: 0;
+}
+
+.brand-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.chip {
+    width: 64px;
+    height: 46px;
+    background: linear-gradient(135deg, #f1d88a, #caa74c);
+    border-radius: 8px;
+    position: relative;
+}
+
+.chip span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(0,0,0,0.35);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chip .v {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.number-section {
+    margin-top: 50px;
+}
+
+.number {
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    right: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.value {
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.valid {
+    text-align: right;
+}

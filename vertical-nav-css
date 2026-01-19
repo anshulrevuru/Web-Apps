@@ -1,0 +1,33 @@
+.nav-bar {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: left; 
+  background-color: #333; 
+  padding: 10px; 
+  flex-direction: column;
+  width: 80px;
+/*  height: 250px; */
+  height: 100vh
+}
+
+.nav-links {
+  display: flex;
+  list-style: none; 
+  margin: 10; 
+  padding: 0; 
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.nav-links li {
+  margin: 0 0px;
+}
+
+.nav-links .link-text {
+  color: white;
+  text-decoration: none; 
+}
+
+.brand-name {
+  color: white;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Output</title>
+</head>
+
+<body>
+  <pre id = "output"></pre>
+
+  <script>
+    const out = document.getElementById ("output");
+
+    function print (value){
+      out.textContent += value + "\n";
+    }
+
+    let x = {}, 
+        y = { name: "Ronny" }, 
+        z = { name: "John" };
+
+    x[y] = { name: "Vivek" };
+    x[z] = { name: "Akki" };
+
+    print (JSON.stringify (x [z]));
+
+    function runFunc (){
+      print ("1" + 1);
+      print ("A" + 1);
+      print (2 + "-2" + "2");
+      print ("Hello" - "World" + 78);
+      print ("Hello" + "78");
+    }
+
+    runFunc ();
+
+    let a = 0;
+    let b = false;
+
+    print (a == b);
+    print (a === b);
+  </script>
+</body>
+</html>

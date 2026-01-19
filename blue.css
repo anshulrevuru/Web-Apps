@@ -1,0 +1,15 @@
+p {
+    color: blue;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/*
+
+h1::first-letter,
+h2::first-letter,
+h3::first-letter {
+  text-transform: uppercase;
+}
+  */

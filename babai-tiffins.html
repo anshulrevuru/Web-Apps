@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8" />
+<title>Receipt — Flexbox</title>
+
+<style>
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background:#e8e8e8;
+}
+
+.receipt {
+  background:#fff;
+  width:380px;
+  margin:25px auto;
+  padding:18px 18px 25px;
+  border:1px solid #cfcfcf;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+.center { text-align:center; }
+
+.header {
+  line-height:1.3;
+  margin-bottom:8px;
+}
+
+.dashed {
+  border-top:1px dashed #888;
+  margin:8px 0;
+}
+
+.row {
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+
+.label {
+  font-weight:bold;
+}
+
+.table-head,
+.item-row {
+  display:flex;
+  justify-content:space-between;
+  padding:3px 0;
+}
+
+.col-item { width:42%; }
+.col-qty { width:10%; text-align:center; }
+.col-price { width:20%; text-align:right; }
+.col-amt { width:22%; text-align:right; }
+
+.table-head span {
+  font-weight:600;
+  border-bottom:1px solid #000;
+  padding-bottom:3px;
+}
+
+.total-row {
+  display:flex;
+  justify-content:space-between;
+  font-size:15px;
+  margin:3px 0;
+}
+
+.bold { font-weight:700; }
+.right { text-align:right; }
+.mt8 { margin-top:8px; }
+</style>
+</head>
+
+<body>
+
+<div class="receipt">
+
+  <div class="header center">
+    <strong>Babai Tiffins, HSR</strong><br>
+    Ristara Foods Pvt Ltd<br>
+    #08, 19th Main Road, 4th Sector<br>
+    HSR Layout, Bangalore – 560102<br>
+    GST: 29AAOCR3450J1ZW<br>
+    FSSAI: 11225334000615
+  </div>
+
+  <div class = "dashed"></div>
+
+  <div class = "row">
+    <span>Date: 02/01/26</span>
+    <span><strong>Self service: 111</strong></span>
+  </div>
+
+  <div class = "row">
+    <span>00:08</span>
+  </div>
+
+  <div class = "row">
+    <span>Cashier: MANAGER</span>
+    <span>Bill No: 981979</span>
+  </div>
+
+  <div class = "row">
+    <strong>Token No: 4554</strong>
+  </div>
+
+  <div class = "dashed"></div>
+
+  <div class = "table-head">
+    <span class = "col-item">Item</span>
+    <span class = "col-qty">Qty</span>
+    <span class = "col-price">Price</span>
+    <span class = "col-amt">Amount</span>
+  </div>
+
+  <div class="item-row">
+    <span class="col-item">Mysore Bajji (4 pcs)</span>
+    <span class="col-qty">1</span>
+    <span class="col-price">80.95</span>
+    <span class="col-amt">80.95</span>
+  </div>
+
+  <div class="item-row">
+    <span class="col-item">Lemon Tea</span>
+    <span class="col-qty">1</span>
+    <span class="col-price">19.05</span>
+    <span class="col-amt">19.05</span>
+  </div>
+
+  <div class="item-row">
+    <span class="col-item">Filter Coffee</span>
+    <span class="col-qty">1</span>
+    <span class="col-price">28.57</span>
+    <span class="col-amt">28.57</span>
+  </div>
+
+  <div class="item-row">
+    <span class="col-item">Tea</span>
+    <span class="col-qty">1</span>
+    <span class="col-price">22.86</span>
+    <span class="col-amt">22.86</span>
+  </div>
+
+  <div class="dashed"></div>
+
+  <div text-align = "right">
+    <span>Total Qty: 4</span>
+    <span>Subtotal</span>
+    <span>151.43</span>
+  </div>
+
+  <div class="total-row">
+    <span>CGST @ 2.5%</span>
+    <span>3.79</span>
+  </div>
+
+  <div class="total-row">
+    <span>SGST @ 2.5%</span>
+    <span>3.79</span>
+  </div>
+
+  <div class="dashed"></div>
+
+  <div text-align = "right">
+    <span>Round off</span> 
+    <span>-0.01</span>
+  </div>
+
+  <div class="center">
+    <h3>Grand Total — ₹159.00</h3>
+    <div text-align = "right">Paid via Card</div>
+  </div>
+
+  <div class = "dashed"></div>
+
+  <div class="center mt8">Thanks</div>
+
+</div>
+
+</body>
+</html>
