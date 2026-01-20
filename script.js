@@ -10,14 +10,23 @@ const questions = [
         answer: "All of the above"
     },
     {
-        question: "Which reviewer has max no of subscribers?",
+        question: "Why Anil Ravipudi didn't direct Bhagavanth Kesari in Kollywood? Is it because",
         options: [
-            "Suraj Kumar",
-            "Abhishek",
-            "Yogesh Rokde",
+            "he's not comfortable.",
+            "he doesn't want to.",
+            "it's not his strength.",
+            "Both a. and c."
+        ],
+        answer: "both a. and c."
+    },
+    {
+        question: "In CS, which symbol's used for power?",
+        options: [
+            "^",
+            "**",
             "All of the above"
         ],
-        answer: "Abhishek"
+        answer: "**"
     },
     {
         question: "Who's the most funniest and humorous reviewer?",
@@ -30,15 +39,15 @@ const questions = [
         answer: "Suraj Kumar"
     },
     {
-        question: "Which reviewer has min no of subscribers?",
+        question: "CC is similar to which subject?"
         options: [
-            "Suraj Kumar",
-            "Abhishek",
-            "Yogesh Rokde",
-            "All of the above"
+            "OS",
+            "DAA",
+            "MPCA",
+            "DDCO"
         ],
-        answer: "Suraj Kumar"
-    },
+        answer: "OS"
+    }
 ];
 
 let index = 0;
@@ -71,8 +80,8 @@ function loadQuestion (){
     });
 
     if (userAnswers[index]) {
-        options.forEach(opt => {
-            if (opt.nextElementSibling.innerText === userAnswers[index]) {
+        options.forEach (opt => {
+            if (opt.nextElementSibling.innerText === userAnswers [index]) {
                 opt.checked = true;
             }
         });
@@ -81,18 +90,18 @@ function loadQuestion (){
     prevBtn.disabled = index === 0;
 }
 
-function getSelected() {
+function getSelected (){
     let selected = null;
-    options.forEach(opt => {
-        if (opt.checked) {
+    options.forEach (opt => {
+        if (opt.checked){
             selected = opt.nextElementSibling.innerText;
         }
     });
     return selected;
 }
 
-function deselectAnswers() {
-    options.forEach(opt => opt.checked = false);
+function deselectAnswers (){
+    options.forEach (opt => opt.checked = false);
 }
 
 nextBtn.addEventListener("click", () => {
@@ -102,31 +111,31 @@ nextBtn.addEventListener("click", () => {
         return;
     }
 
-    userAnswers[index] = selected;
+    userAnswers [index] = selected;
 
     if (index === questions.length - 1) {
-        calculateScore();
-        quizEl.classList.add("hide");
-        resultEl.classList.remove("hide");
+        calculateScore ();
+        quizEl.classList.add ("hide");
+        resultEl.classList.remove ("hide");
         return;
     }
 
     index++;
-    loadQuestion();
+    loadQuestion ();
 });
 
-prevBtn.addEventListener("click", () => {
-    userAnswers[index] = getSelected();
+prevBtn.addEventListener ("click", () => {
+    userAnswers [index] = getSelected ();
     index--;
     loadQuestion();
 });
 
-function calculateScore() {
+function calculateScore (){
     score = 0;
-    userAnswers.forEach((ans, i) => {
+    userAnswers.forEach ((ans, i) => {
         if (ans === questions[i].answer) score++;
     });
     scoreEl.innerText = `${score}/${questions.length}`;
 }
 
-loadQuestion();
+loadQuestion ();
