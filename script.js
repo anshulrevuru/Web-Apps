@@ -39,7 +39,7 @@ const questions = [
         answer: "Suraj Kumar"
     },
     {
-        question: "CC is similar to which subject?"
+        question: "CC is similar to which subject?",
         options: [
             "OS",
             "DAA",
