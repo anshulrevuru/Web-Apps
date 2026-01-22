@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000vh;
+    min-width: 100vh;
+    margin: 50px;
+    background: #ddd;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, .1);
+}
+
+.container .left_Side {
+    position: relative;
+    background: #0031dd;
+    padding: 40px;
+}
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0);
+}
+
+.profileText h2 {
+    color: #ddd;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.contactInfo ul {
+    position: relative;
+}
+
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li i {
+    width: 20px;
+    color: #03a9f4;
+    font-size: 1em;
+}
+
+.contactInfo ul li span {
+    margin-left: 10px;
+}
+
+.profileText h2 span {
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.education {
+    margin-top: 40px;
+}
+
+.education .title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.education ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education ul li {
+    margin-bottom: 18px;
+}
+
+.education ul li .year {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.education ul li h4 {
+    font-size: .95em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.education ul li p {
+    font-size: .85em;
+    font-weight: 300;
+}
+
+.skills {
+    margin-top: 40px;
+    color: #fff;
+}
+
+.skills .title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    margin-bottom: 18px;
+}
+
+.skills ul li .text {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    margin-bottom: 6px;
+}
+
+.skills ul li .percentText {
+    font-size: .8em;
+    opacity: .8;
+}
+
+.skills ul li .bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skills ul li .bar .fill {
+    height: 100%;
+    background: #03a9f4;
+}
+
+
+.contactInfo {
+    margin-top: 80px;
+}
+
+.container .right_Side {
+    position: relative;
+    background: #ddd;
+    padding: 40px;
+}
+
+.right_Side {
+    padding: 40px;
+    background: #eaeaea;
+}
+
+.about {
+    margin-bottom: 40px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about p {
+    font-size: .95em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about .box {
+    display: flex;
+    margin: 20px 0;
+}
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    font-size: .85em;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.about .box .text h4 {
+    font-size: 1em;
+    color: #0031dd;
+    margin-bottom: 5px;
+}
+
+.about .box .text p {
+    font-size: .9em;
+    color: #333;
+}
+
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies ul li {
+    font-size: .95em;
+    color: #333;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.hobbies ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.certificates ul {
+  list-style: none;
+  padding: 0;
+}
+
+.certificates li {
+  margin-bottom: 12px;
+  font-size: .95em;
+}
+
+.certificates strong {
+  color: #003;
+  font-weight: 600;
+}
+
+.certificates span {
+  font-size: .85em;
+  color: #555;
+}
+
+
+.experience .expBox {
+  margin-bottom: 25px;
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expHeader h4 {
+  font-size: 1em;
+  color: #333;
+}
+
+.expHeader span {
+  font-size: .8em;
+  color: #666;
+}
+
+.expOrg {
+  font-size: .9em;
+  color: #444;
+  margin: 5px 0 8px;
+}
+
+.experience ul {
+  padding-left: 18px;
+}
+
+.experience ul li {
+  font-size: .9em;
+  margin-bottom: 6px;
+}
