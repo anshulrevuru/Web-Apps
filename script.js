@@ -25,7 +25,8 @@ const questions = [
     options: [
       "^",
       "**",
-      "All of the above"
+      "pow",
+      "exp"
     ],
     answer: "**"
   },
