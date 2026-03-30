@@ -16,7 +16,7 @@ const questions = [
       "he's not comfortable.",
       "he doesn't want to.",
       "it's not his strength.",
-      "both a. and c."
+      "Both a) and c)"
     ],
     answer: "both a. and c."
   },
@@ -26,9 +26,9 @@ const questions = [
       "^",
       "**",
       "pow",
-      "exp"
+      "Both a) and b)"
     ],
-    answer: "**"
+    answer: "Both a) and b)"
   },
   {
     question: "Who's the most funniest and humorous reviewer?",
