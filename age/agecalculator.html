@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator using JS</title>
+    <link rel="stylesheet" href="agecalculator.css">
+</head>
+<body>
+<div class="container">
+    <div class="calculator">
+        <h1>JavaScript<br><span>Age calculator</span></h1>
+
+        <div class="input-box">
+            <input type="date" id="date">
+            <button onclick="calculateAge()">Calculate</button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+</div>
+
+<script>
+let userInput = document.getElementById("date");
+userInput.max = new Date().toISOString().split("T")[0];
+
+let result = document.getElementById("result");
+
+function calculateAge() {
+    let birthDate = new Date(userInput.value);
+    //alert(userInput.value)
+    const celeb = findCelebrity(userInput.value)
+    let d1 = birthDate.getDate();
+    let m1 = birthDate.getMonth() + 1;
+    let y1 = birthDate.getFullYear();
+
+    let today = new Date();
+
+    let d2 = today.getDate();
+    let m2 = today.getMonth() + 1;
+    let y2 = today.getFullYear();
+
+    let d3, m3, y3;
+
+    y3 = y2 - y1;
+
+    if (m2 >= m1) {
+        m3 = m2 - m1;
+    } else {
+        y3--;
+        m3 = 12 + m2 - m1;
+    }
+
+    if (d2 >= d1) {
+        d3 = d2 - d1;
+    } else {
+        m3--;
+        d3 = getDaysInMonth(y2, m2 - 1) + d2 - d1;
+    }
+
+    if (m3 < 0) {
+        m3 = 11;
+        y3--;
+    }
+
+    result.innerHTML = `You're ${y3} yrs, ${m3} months and ${d3} days old. <br>${celeb}`;
+}
+
+// 1. Your list of celebrity birthdays
+const celebrities = [
+    { name: "Keanu Reeves", birthday: "1964-09-02" },
+    { name: "Nayantara", birthday: "1984-11-18" },
+    { name: "Priyamani", birthday: "1984-06-04" },
+    { name: "Sylverster Stallone", birthday: "1946-07-06" },
+    { name: "Shruti Haasan", birthday: "1986-01-28"},
+    { name: "Ranveer Singh", birthday: "1985-07-06"}
+];
+
+// 2. Function to check the date
+function findCelebrity(userInput) {
+    // Standardizing user input format just in case
+    const targetDate = new Date(userInput).toISOString().split('T')[0];
+
+    // 3. Compare and find matches
+    const matches = celebrities.filter(celeb => celeb.birthday === targetDate);
+
+    // 4. Return the names as a string or a fallback message
+    if (matches.length > 0) {
+        // Returns names separated by a comma if multiple celebrities share a birthday
+        return matches.map(celeb => celeb.name).join(", ");
+    } else {
+        return "No celebrity matches found.";
+    }
+}
+
+function getDaysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
+}
+</script>
+</body>
+</html>
