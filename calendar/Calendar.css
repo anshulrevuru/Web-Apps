@@ -1,78 +1,87 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f2f2f2;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
 }
 
-
 .calendar-container {
-  min-height: 100vh;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
 .calendar {
-  width: 350px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-  padding: 20px;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .calendar-header button {
-  background: #0f91e6;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
+    background: #0f91e6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .calendar-header button:hover {
-  background: #083959;
+    background: #083959;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
 }
 
 .calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
 }
 
 .day-name {
-  font-weight: bold;
-  text-align: center;
+    font-weight: bold;
+    color: #555;
+    padding: 5px 0;
 }
 
 .day {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f7f7f7;
-  border-radius: 6px;
-  cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
 .day:hover {
-  background: #0f91e6;
-  color: white;
+    background: #0f91e6;
+    color: white;
 }
 
 .empty {
-  height: 40px;
+    height: 40px;
 }
