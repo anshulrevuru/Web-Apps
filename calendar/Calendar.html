@@ -4,27 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-    
-    <!-- Link to your CSS -->
     <link rel="stylesheet" href="Calendar.css">
 </head>
 <body>
     <div id="root"></div>
 
-    <!-- If you're using plain JS without bundler (Vite/Create React App), include React scripts -->
-    <!-- For a simple setup without build tools: -->
-
+    <!-- React + ReactDOM + Babel from CDN -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
 
-    <!-- Your Calendar component -->
-    <script type="text/babel" src="Calendar.jsx"></script>
-
-    <script type="text/babel">
-        // Render your component
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<Calendar />);
-    </script>
+    <!-- Your JavaScript file -->
+    <script type="text/babel" src="Calendar.js"></script>
 </body>
 </html>
